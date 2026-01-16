@@ -6,20 +6,20 @@ ATS-style insights.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 📄 Upload PDF resumes (Drag & Drop)
-- 🔍 Resume text extraction with OCR fallback
-- 🧠 AI-powered resume analysis using Google Gemini
-- 📝 Job Description comparison
-- 🎯 Missing skills & ATS keyword detection
-- 📊 Dynamic resume score
-- 🌙 Light / Dark mode UI
-- 💻 Clean Django architecture
+-  Upload PDF resumes (Drag & Drop)
+-  Resume text extraction with OCR fallback
+-  AI-powered resume analysis using Google Gemini
+-  Job Description comparison
+-  Missing skills & ATS keyword detection
+-  Dynamic resume score
+-  Light / Dark mode UI
+-  Clean Django architecture
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Backend**: Django
 - **AI**: Google Gemini (`google.genai`)
@@ -29,7 +29,7 @@ ATS-style insights.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 resume_analyser/
 ├── analyzer/
 │ ├── utils/
