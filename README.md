@@ -32,16 +32,19 @@ ATS-style insights.
 ##  Project Structure
 resume_analyser/
 ├── analyzer/
-│ ├── utils/
-│ │ ├── resume_parser.py
-│ │ ├── text_cleaner.py
-│ │ └── gemini_client.py
-│ ├── templates/
-│ ├── static/
-│ ├── views.py
-│ └── urls.py
-├── resume_analyser/
+│   ├── utils/
+│   │   ├── resume_parser.py
+│   │   ├── text_cleaner.py
+│   │   └── gemini_client.py
+│   ├── templates/
+│   ├── static/
+│   ├── views.py
+│   └── urls.py
+├── resume_analyser/       # Project configuration (settings.py, urls.py, etc.)
 ├── manage.py
+├── requirements.txt
+├── README.md
+└── .env
 ├── requirements.txt
 ├── README.md
 └── .env
