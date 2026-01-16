@@ -1,0 +1,179 @@
+/* --- Theme Variables --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f8f9fa;
+    --score-bg: #e9ecef;
+    --navbar-bg: #f8f9fa;
+    --drop-zone-bg: #ffffff;
+    --main-text-color: #222222;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f0f1a;
+    --text-color: #ffffff;
+    --card-bg: #1e1e2f;
+    --score-bg: #121212;
+    --navbar-bg: #1a1a2e;
+    --drop-zone-bg: #252538;
+    --main-text-color: #ffffff;
+}
+
+/* --- Base Styles --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    white-space: normal; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    margin-top: 30px;
+    color: var(--main-text-color);
+}
+
+/* --- The Cards (The sections Gemini fills) --- */
+.card {
+    background-color: var(--card-bg) !important;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 16px 0;
+    color: var(--text-color) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.card li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+/* --- Category Borders --- */
+.good { border-left: 8px solid #4caf50; }
+.bad { border-left: 8px solid #f44336; }
+.improve { border-left: 8px solid #ff9800; }
+.jd { border-left: 8px solid #2196f3; }
+
+/* --- Score Section --- */
+.score-card {
+    background-color: var(--score-bg);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+
+.score-bar {
+    background: #333;
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+#scoreFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #f44336, #ffeb3b, #4caf50);
+    transition: width 1.5s ease-in-out;
+}
+
+/* --- Upload Zone --- */
+#drop-zone {
+    border: 2px dashed #007bff; 
+    border-radius: 15px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#drop-zone:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    border-color: #0056b3;
+}
+
+.drag-over {
+    background-color: #d1ecf1 !important;
+    border-color: #0c5460 !important;
+    transform: scale(1.02);
+}
+
+/* --- Navbar Adjustments --- */
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    transition: background-color 0.3s;
+}
+
+.nav-link, .navbar-brand {
+    color: var(--text-color) !important;
+}
+
+
+/* ---------- Job Description Textarea (Bootstrap Override) ---------- */
+textarea.jd-textarea {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 14px;
+
+    border: 1px solid rgba(0, 123, 255, 0.6);
+    resize: vertical;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+/* 🔑 Placeholder — Light Mode */
+textarea.jd-textarea::placeholder {
+    color: rgba(120, 120, 120, 0.8);
+}
+
+/* 🔑 Placeholder — Dark Mode */
+[data-theme="dark"] textarea.jd-textarea::placeholder {
+    color: rgba(200, 200, 200, 0.6);
+}
+
+/* 🔑 Focus Styling */
+textarea.jd-textarea:focus {
+    outline: none !important;
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+}
